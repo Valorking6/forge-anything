@@ -1,0 +1,106 @@
+/* Segment Anything Tab Styles */
+
+/* Main container */
+#segment_anything_tab {
+    padding: 20px;
+}
+
+/* Headers */
+#segment_anything_tab h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#segment_anything_tab h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Boxes */
+#segment_anything_tab .gradio-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Buttons */
+#segment_anything_tab button.primary {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#segment_anything_tab button.primary:hover {
+    background-color: #45a049;
+}
+
+#segment_anything_tab button.secondary {
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+#segment_anything_tab button.secondary:hover {
+    background-color: #ddd;
+}
+
+/* Refresh buttons */
+#refresh_sam_models, #refresh_dino_models {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+/* Images */
+#segment_anything_tab .image-container {
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Status text */
+#segment_anything_tab .status-text {
+    font-style: italic;
+    color: #666;
+}
+
+/* Checkboxes */
+#segment_anything_tab input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Text inputs */
+#segment_anything_tab input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #segment_anything_tab .gradio-row {
+        flex-direction: column;
+    }
+    
+    #segment_anything_tab .gradio-column {
+        width: 100%;
+    }
+}
