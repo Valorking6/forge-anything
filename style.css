@@ -1,3 +1,4 @@
+
 /* Segment Anything Tab Styles */
 
 /* Main container */
@@ -7,100 +8,153 @@
 
 /* Headers */
 #segment_anything_tab h1 {
-    font-weight: 900;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #1f6feb;
 }
 
 #segment_anything_tab h2 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #2ea043;
 }
 
-/* Boxes */
-#segment_anything_tab .gradio-box {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Sections */
+.sam-section {
+    margin-bottom: 20px;
     padding: 15px;
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    background-color: rgba(240, 240, 240, 0.3);
+    border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+/* Model selection */
+.model-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.model-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Image upload area */
+.image-upload-area {
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.image-upload-area:hover {
+    border-color: #1f6feb;
+    background-color: rgba(31, 111, 235, 0.05);
+}
+
+/* Segmentation options */
+.segmentation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Results area */
+.results-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.result-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons */
-#segment_anything_tab button.primary {
-    background-color: #4CAF50;
+.sam-button {
+    background-color: #1f6feb;
     color: white;
     border: none;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    border-radius: 4px;
+    padding: 8px 16px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-#segment_anything_tab button.primary:hover {
-    background-color: #45a049;
+.sam-button:hover {
+    background-color: #0d5bdd;
 }
 
-#segment_anything_tab button.secondary {
-    background-color: #f1f1f1;
-    color: black;
-    border: 1px solid #ddd;
+.sam-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-#segment_anything_tab button.secondary:hover {
-    background-color: #ddd;
+.download-button {
+    background-color: #2ea043;
 }
 
-/* Refresh buttons */
-#refresh_sam_models, #refresh_dino_models {
-    padding: 0 10px;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 25px;
+.download-button:hover {
+    background-color: #238636;
 }
 
-/* Images */
-#segment_anything_tab .image-container {
-    border: 1px dashed #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Status text */
-#segment_anything_tab .status-text {
-    font-style: italic;
-    color: #666;
-}
-
-/* Checkboxes */
-#segment_anything_tab input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-/* Text inputs */
-#segment_anything_tab input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+/* Progress indicators */
+.progress-bar {
     width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #1f6feb;
+    transition: width 0.3s ease;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    #segment_anything_tab .gradio-row {
+    .model-row {
         flex-direction: column;
-    }
-    
-    #segment_anything_tab .gradio-column {
-        width: 100%;
+        align-items: flex-start;
     }
 }
