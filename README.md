@@ -1,6 +1,6 @@
 
 # Forge Anything - Segment Anything Model for Stable Diffusion WebUI
-
+Currently in Alpha - some UI elements missing, errors when running generate.
 This extension integrates Meta's Segment Anything Model (SAM) into the Stable Diffusion WebUI with a dedicated tab interface for easier access and improved workflow.
 
 ## Features
